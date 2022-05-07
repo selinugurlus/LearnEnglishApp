@@ -81,6 +81,42 @@ namespace SınavSistemii
 
         }
 
+        private void SınavSoruHazırlamaForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResimsizSoruEkleButton_Click(object sender, EventArgs e)
+        {
+            SqlConnection baglanti = new SqlConnection("Data Source=LAPTOP-CS90DTMS\\MSSQL;Initial Catalog=SinavSistemiDB;Integrated Security=True");
+            SqlCommand komut = new SqlCommand(" insert into Sorular (konu,soru,dogru_cevap,yanlis_cevap1,yanlis_cevap2,yanlis_cevap3)values(@konu,@soru,@dogrucevap,@yanliscevap1,@yanliscevap2,@yanliscevap3)", baglanti);
+            komut.Parameters.AddWithValue("@konu", KonuTextBox.Text);
+            komut.Parameters.AddWithValue("@soru", SoruTextBox.Text);
+            komut.Parameters.AddWithValue("@dogrucevap", DogruCevapTextBox.Text);
+            komut.Parameters.AddWithValue("@yanliscevap1", YanlisCevapTextBox1.Text);
+            komut.Parameters.AddWithValue("@yanliscevap2", YanlisCevapTextBox2.Text);
+            komut.Parameters.AddWithValue("@yanliscevap3", YanlisCevapTextBox3.Text);
+            try
+
+            {
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                MessageBox.Show("Soru kaydedildi.");
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+
+            finally
+
+            {
+                baglanti.Close();
+            }
+
+        }
     }
 
 }

@@ -46,6 +46,7 @@ namespace SınavSistemii
             this.ResimYukleButton = new System.Windows.Forms.Button();
             this.SoruEkleButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ResimsizSoruEkleButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SoruGorselipictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,7 +212,7 @@ namespace SınavSistemii
             // SoruEkleButton
             // 
             this.SoruEkleButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SoruEkleButton.Location = new System.Drawing.Point(330, 645);
+            this.SoruEkleButton.Location = new System.Drawing.Point(137, 634);
             this.SoruEkleButton.Name = "SoruEkleButton";
             this.SoruEkleButton.Size = new System.Drawing.Size(365, 46);
             this.SoruEkleButton.TabIndex = 15;
@@ -223,11 +224,22 @@ namespace SınavSistemii
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // ResimsizSoruEkleButton
+            // 
+            this.ResimsizSoruEkleButton.Location = new System.Drawing.Point(635, 644);
+            this.ResimsizSoruEkleButton.Name = "ResimsizSoruEkleButton";
+            this.ResimsizSoruEkleButton.Size = new System.Drawing.Size(217, 36);
+            this.ResimsizSoruEkleButton.TabIndex = 16;
+            this.ResimsizSoruEkleButton.Text = "button1";
+            this.ResimsizSoruEkleButton.UseVisualStyleBackColor = true;
+            this.ResimsizSoruEkleButton.Click += new System.EventHandler(this.ResimsizSoruEkleButton_Click);
+            // 
             // SınavSoruHazırlamaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 692);
+            this.Controls.Add(this.ResimsizSoruEkleButton);
             this.Controls.Add(this.SoruEkleButton);
             this.Controls.Add(this.ResimYukleButton);
             this.Controls.Add(this.SoruGorselipictureBox);
@@ -246,6 +258,7 @@ namespace SınavSistemii
             this.Controls.Add(this.materialLabel1);
             this.Name = "SınavSoruHazırlamaForm";
             this.Text = "SınavSoruHazırlamaForm";
+            this.Load += new System.EventHandler(this.SınavSoruHazırlamaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SoruGorselipictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,5 +284,6 @@ namespace SınavSistemii
         private System.Windows.Forms.Button ResimYukleButton;
         private System.Windows.Forms.Button SoruEkleButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button ResimsizSoruEkleButton;
     }
 }

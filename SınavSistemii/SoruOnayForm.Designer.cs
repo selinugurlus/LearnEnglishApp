@@ -31,10 +31,6 @@ namespace SınavSistemii
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SoruKaldırButton = new System.Windows.Forms.Button();
-            this.sinavSistemiDBDataSet2 = new SınavSistemii.SinavSistemiDBDataSet2();
-            this.sorularBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sorularTableAdapter = new SınavSistemii.SinavSistemiDBDataSet2TableAdapters.SorularTableAdapter();
             this.soruidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.konuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,13 +39,18 @@ namespace SınavSistemii
             this.yanliscevap2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yanliscevap3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resimDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.sorularBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sinavSistemiDBDataSet2 = new SınavSistemii.SinavSistemiDBDataSet2();
+            this.SoruKaldırButton = new System.Windows.Forms.Button();
+            this.sorularTableAdapter = new SınavSistemii.SinavSistemiDBDataSet2TableAdapters.SorularTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sinavSistemiDBDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sorularBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinavSistemiDBDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -69,31 +70,6 @@ namespace SınavSistemii
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1271, 409);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // SoruKaldırButton
-            // 
-            this.SoruKaldırButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SoruKaldırButton.Location = new System.Drawing.Point(1123, 524);
-            this.SoruKaldırButton.Name = "SoruKaldırButton";
-            this.SoruKaldırButton.Size = new System.Drawing.Size(200, 93);
-            this.SoruKaldırButton.TabIndex = 1;
-            this.SoruKaldırButton.Text = "SEÇİLİ SORULARI KALDIR";
-            this.SoruKaldırButton.UseVisualStyleBackColor = false;
-            this.SoruKaldırButton.Click += new System.EventHandler(this.SoruKaldırButton_Click);
-            // 
-            // sinavSistemiDBDataSet2
-            // 
-            this.sinavSistemiDBDataSet2.DataSetName = "SinavSistemiDBDataSet2";
-            this.sinavSistemiDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sorularBindingSource
-            // 
-            this.sorularBindingSource.DataMember = "Sorular";
-            this.sorularBindingSource.DataSource = this.sinavSistemiDBDataSet2;
-            // 
-            // sorularTableAdapter
-            // 
-            this.sorularTableAdapter.ClearBeforeFill = true;
             // 
             // soruidDataGridViewTextBoxColumn
             // 
@@ -160,6 +136,31 @@ namespace SınavSistemii
             this.resimDataGridViewImageColumn.Name = "resimDataGridViewImageColumn";
             this.resimDataGridViewImageColumn.Width = 150;
             // 
+            // sorularBindingSource
+            // 
+            this.sorularBindingSource.DataMember = "Sorular";
+            this.sorularBindingSource.DataSource = this.sinavSistemiDBDataSet2;
+            // 
+            // sinavSistemiDBDataSet2
+            // 
+            this.sinavSistemiDBDataSet2.DataSetName = "SinavSistemiDBDataSet2";
+            this.sinavSistemiDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // SoruKaldırButton
+            // 
+            this.SoruKaldırButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SoruKaldırButton.Location = new System.Drawing.Point(1123, 524);
+            this.SoruKaldırButton.Name = "SoruKaldırButton";
+            this.SoruKaldırButton.Size = new System.Drawing.Size(200, 93);
+            this.SoruKaldırButton.TabIndex = 1;
+            this.SoruKaldırButton.Text = "SEÇİLİ SORULARI KALDIR";
+            this.SoruKaldırButton.UseVisualStyleBackColor = false;
+            this.SoruKaldırButton.Click += new System.EventHandler(this.SoruKaldırButton_Click);
+            // 
+            // sorularTableAdapter
+            // 
+            this.sorularTableAdapter.ClearBeforeFill = true;
+            // 
             // SoruOnayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -171,8 +172,8 @@ namespace SınavSistemii
             this.Text = "SoruOnayForm";
             this.Load += new System.EventHandler(this.SoruOnayForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sinavSistemiDBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sorularBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinavSistemiDBDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
