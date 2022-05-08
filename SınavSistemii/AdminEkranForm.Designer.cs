@@ -35,7 +35,7 @@ namespace SınavSistemii
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 676);
+            this.ClientSize = new System.Drawing.Size(1196, 676);
             this.Name = "AdminEkranForm";
             this.Text = "AdminEkranForm";
             this.ResumeLayout(false);

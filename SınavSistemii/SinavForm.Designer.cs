@@ -29,6 +29,7 @@ namespace SınavSistemii
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.SinavSorutextBox = new System.Windows.Forms.TextBox();
             this.SinavResimpictureBox = new System.Windows.Forms.PictureBox();
             this.DogruCevapbutton = new System.Windows.Forms.Button();
@@ -41,6 +42,12 @@ namespace SınavSistemii
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lab = new System.Windows.Forms.Label();
             this.SayactextBox = new System.Windows.Forms.TextBox();
+            this.Surelabel = new System.Windows.Forms.Label();
+            this.dk_label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.sn_label = new System.Windows.Forms.Label();
+            this.surebaslatbutton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.SinavResimpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +109,7 @@ namespace SınavSistemii
             this.SinaviBaslatButton.Name = "SinaviBaslatButton";
             this.SinaviBaslatButton.Size = new System.Drawing.Size(182, 93);
             this.SinaviBaslatButton.TabIndex = 15;
-            this.SinaviBaslatButton.Text = "BAŞLAT";
+            this.SinaviBaslatButton.Text = "SINAVI BAŞLAT";
             this.SinaviBaslatButton.UseVisualStyleBackColor = true;
             this.SinaviBaslatButton.Click += new System.EventHandler(this.SinaviBaslatButton_Click);
             // 
@@ -124,7 +131,7 @@ namespace SınavSistemii
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(518, 114);
+            this.dateTimePicker1.Location = new System.Drawing.Point(880, 80);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 18;
@@ -145,11 +152,66 @@ namespace SınavSistemii
             this.SayactextBox.Size = new System.Drawing.Size(100, 26);
             this.SayactextBox.TabIndex = 20;
             // 
+            // Surelabel
+            // 
+            this.Surelabel.AutoSize = true;
+            this.Surelabel.Location = new System.Drawing.Point(438, 123);
+            this.Surelabel.Name = "Surelabel";
+            this.Surelabel.Size = new System.Drawing.Size(125, 20);
+            this.Surelabel.TabIndex = 21;
+            this.Surelabel.Text = "KALAN ZAMAN:";
+            // 
+            // dk_label
+            // 
+            this.dk_label.AutoSize = true;
+            this.dk_label.Location = new System.Drawing.Point(589, 123);
+            this.dk_label.Name = "dk_label";
+            this.dk_label.Size = new System.Drawing.Size(19, 20);
+            this.dk_label.TabIndex = 22;
+            this.dk_label.Text = "--";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(614, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = ":";
+            // 
+            // sn_label
+            // 
+            this.sn_label.AutoSize = true;
+            this.sn_label.Location = new System.Drawing.Point(633, 123);
+            this.sn_label.Name = "sn_label";
+            this.sn_label.Size = new System.Drawing.Size(19, 20);
+            this.sn_label.TabIndex = 24;
+            this.sn_label.Text = "--";
+            // 
+            // surebaslatbutton
+            // 
+            this.surebaslatbutton.Location = new System.Drawing.Point(673, 117);
+            this.surebaslatbutton.Name = "surebaslatbutton";
+            this.surebaslatbutton.Size = new System.Drawing.Size(127, 29);
+            this.surebaslatbutton.TabIndex = 25;
+            this.surebaslatbutton.Text = "Süreyi Başlat";
+            this.surebaslatbutton.UseVisualStyleBackColor = true;
+            this.surebaslatbutton.Click += new System.EventHandler(this.surebaslatbutton_Click_1);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            // 
             // SinavForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1322, 742);
+            this.Controls.Add(this.surebaslatbutton);
+            this.Controls.Add(this.sn_label);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dk_label);
+            this.Controls.Add(this.Surelabel);
             this.Controls.Add(this.SayactextBox);
             this.Controls.Add(this.lab);
             this.Controls.Add(this.dateTimePicker1);
@@ -184,5 +246,11 @@ namespace SınavSistemii
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lab;
         private System.Windows.Forms.TextBox SayactextBox;
+        private System.Windows.Forms.Label Surelabel;
+        private System.Windows.Forms.Label dk_label;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label sn_label;
+        private System.Windows.Forms.Button surebaslatbutton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
