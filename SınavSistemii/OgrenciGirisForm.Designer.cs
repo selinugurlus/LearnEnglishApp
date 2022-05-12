@@ -115,6 +115,7 @@ namespace SınavSistemii
             this.OgrGirisButton.TabIndex = 4;
             this.OgrGirisButton.Text = "GİRİŞ YAP";
             this.OgrGirisButton.UseVisualStyleBackColor = true;
+            this.OgrGirisButton.Click += new System.EventHandler(this.OgrGirisButton_Click);
             // 
             // OgrSifreUnutButton
             // 

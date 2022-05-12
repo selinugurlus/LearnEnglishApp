@@ -54,6 +54,7 @@ namespace SınavSistemii
             this.AdminGirisButton.TabIndex = 9;
             this.AdminGirisButton.Text = "GİRİŞ YAP";
             this.AdminGirisButton.UseVisualStyleBackColor = true;
+            this.AdminGirisButton.Click += new System.EventHandler(this.AdminGirisButton_Click);
             // 
             // AdminGirisSifreTextField
             // 

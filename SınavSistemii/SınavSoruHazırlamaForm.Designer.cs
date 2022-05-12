@@ -216,7 +216,7 @@ namespace SınavSistemii
             this.SoruEkleButton.Name = "SoruEkleButton";
             this.SoruEkleButton.Size = new System.Drawing.Size(365, 46);
             this.SoruEkleButton.TabIndex = 15;
-            this.SoruEkleButton.Text = "SORU EKLE";
+            this.SoruEkleButton.Text = "RESİMSİZ SORU EKLE";
             this.SoruEkleButton.UseVisualStyleBackColor = false;
             this.SoruEkleButton.Click += new System.EventHandler(this.SoruEkleButton_Click);
             // 
@@ -226,12 +226,13 @@ namespace SınavSistemii
             // 
             // ResimsizSoruEkleButton
             // 
-            this.ResimsizSoruEkleButton.Location = new System.Drawing.Point(635, 644);
+            this.ResimsizSoruEkleButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ResimsizSoruEkleButton.Location = new System.Drawing.Point(635, 634);
             this.ResimsizSoruEkleButton.Name = "ResimsizSoruEkleButton";
-            this.ResimsizSoruEkleButton.Size = new System.Drawing.Size(217, 36);
+            this.ResimsizSoruEkleButton.Size = new System.Drawing.Size(242, 46);
             this.ResimsizSoruEkleButton.TabIndex = 16;
-            this.ResimsizSoruEkleButton.Text = "button1";
-            this.ResimsizSoruEkleButton.UseVisualStyleBackColor = true;
+            this.ResimsizSoruEkleButton.Text = "RESİMLİ SORU EKLE";
+            this.ResimsizSoruEkleButton.UseVisualStyleBackColor = false;
             this.ResimsizSoruEkleButton.Click += new System.EventHandler(this.ResimsizSoruEkleButton_Click);
             // 
             // SınavSoruHazırlamaForm
