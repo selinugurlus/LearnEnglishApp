@@ -73,7 +73,7 @@ namespace SınavSistemii
         }
         private void DogruCevapbutton_Click(object sender, EventArgs e)
         {
-            if (sınır == 3)
+            if (sınır == 11)
             {
                 SinaviBaslatButton.Enabled = false;
                 //SinavSorutextBox.Enabled = false;
@@ -121,7 +121,7 @@ namespace SınavSistemii
 
         private void YanlisCevap1button_Click(object sender, EventArgs e)
         {
-            if (sınır == 3)
+            if (sınır == 11)
             {
                 SinaviBaslatButton.Enabled = false;
                 //SinavSorutextBox.Enabled = false;
@@ -163,7 +163,7 @@ namespace SınavSistemii
 
         private void YanlisCevap2button_Click(object sender, EventArgs e)
         {
-            if (sınır == 3)
+            if (sınır == 11)
             {
                 SinaviBaslatButton.Enabled = false;
                 DogruCevapbutton.Enabled = false;
@@ -203,7 +203,7 @@ namespace SınavSistemii
 
         private void YanlisCevap3button_Click(object sender, EventArgs e)
         {
-            if (sınır == 3)
+            if (sınır == 11)
             {
                 SinaviBaslatButton.Enabled = false;
                 //SinavSorutextBox.Enabled = false;

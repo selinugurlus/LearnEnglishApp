@@ -24,5 +24,19 @@ namespace SınavSistemii
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme
                 (MaterialSkin.Primary.LightBlue200, MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.LightBlue300, MaterialSkin.Accent.Pink200, MaterialSkin.TextShade.WHITE);
         }
+
+        private void NormalSinavButton_Click(object sender, EventArgs e)
+        {
+            SinavForm Sinav = new SinavForm();
+            Sinav.Show();
+            this.Hide();
+        }
+
+        private void KarisikSinavButton_Click(object sender, EventArgs e)
+        {
+            Sinav2Form Sinav2 = new Sinav2Form();
+            Sinav2.Show();
+            this.Hide();
+        }
     }
 }

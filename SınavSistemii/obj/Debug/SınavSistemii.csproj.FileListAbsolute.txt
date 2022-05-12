@@ -19,3 +19,7 @@ C:\Users\selin\source\repos\SınavSistemii\SınavSistemii\obj\Debug\SınavSistem
 C:\Users\selin\source\repos\SınavSistemii\SınavSistemii\obj\Debug\SınavSistemii.AdminEkranForm.resources
 C:\Users\selin\source\repos\SınavSistemii\SınavSistemii\obj\Debug\SınavSistemii.SoruOnayForm.resources
 C:\Users\selin\source\repos\SınavSistemii\SınavSistemii\obj\Debug\SınavSistemii.SinavForm.resources
+C:\Users\selin\source\repos\SınavSistemii\SınavSistemii\obj\Debug\SınavSistemii.OgrenciMenuForm.resources
+C:\Users\selin\source\repos\SınavSistemii\SınavSistemii\obj\Debug\SınavSistemii.Sinav2Form.resources
+C:\Users\selin\source\repos\SınavSistemii\SınavSistemii\obj\Debug\SınavSistemii.RaporForm.resources
+C:\Users\selin\source\repos\SınavSistemii\SınavSistemii\obj\Debug\SınavSistemii.Rapor2Form.resources

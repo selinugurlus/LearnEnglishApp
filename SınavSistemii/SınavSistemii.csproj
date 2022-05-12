@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,13 +86,37 @@
     <Compile Include="OgrenciKayitForm.Designer.cs">
       <DependentUpon>OgrenciKayitForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OgrenciMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciMenuForm.Designer.cs">
+      <DependentUpon>OgrenciMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rapor2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rapor2Form.Designer.cs">
+      <DependentUpon>Rapor2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporForm.Designer.cs">
+      <DependentUpon>RaporForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SifremiUnuttumForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SifremiUnuttumForm.Designer.cs">
       <DependentUpon>SifremiUnuttumForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sinav2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sinav2Form.Designer.cs">
+      <DependentUpon>Sinav2Form.cs</DependentUpon>
     </Compile>
     <Compile Include="SinavForm.cs">
       <SubType>Form</SubType>
@@ -148,6 +173,9 @@
     <EmbeddedResource Include="OgrenciKayitForm.resx">
       <DependentUpon>OgrenciKayitForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciMenuForm.resx">
+      <DependentUpon>OgrenciMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -157,8 +185,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Rapor2Form.resx">
+      <DependentUpon>Rapor2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporForm.resx">
+      <DependentUpon>RaporForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SifremiUnuttumForm.resx">
       <DependentUpon>SifremiUnuttumForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sinav2Form.resx">
+      <DependentUpon>Sinav2Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SinavForm.resx">
       <DependentUpon>SinavForm.cs</DependentUpon>
