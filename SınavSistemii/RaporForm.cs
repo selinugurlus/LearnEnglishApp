@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace SınavSistemii
 {
@@ -91,24 +93,6 @@ namespace SınavSistemii
 
 
 
-            //AnimalstextBox.Text = komut.ExecuteScalar().ToString();
-
-
-
-
-
-
-            /* while (oku.Read())
-             {
-                 DogruCevap.Text = oku["dogru_cevap"].ToString();
-                 YanlisCevap1button.Text = oku["yanlis_cevap1"].ToString();
-                 YanlisCevap2button.Text = oku["yanlis_cevap2"].ToString();
-                 YanlisCevap3button.Text = oku["yanlis_cevap3"].ToString();
-                 SorutextBox.Text = oku["soru"].ToString();
-                 KonutextBox.Text = oku["konu"].ToString();
-                 // SinavResimpictureBox.Image = (Image)oku["resim"];
-
-             }*/
 
 
             baglanti.Close();
@@ -119,6 +103,23 @@ namespace SınavSistemii
             OgrenciMenuForm ogrmenu = new OgrenciMenuForm();
             ogrmenu.Show();
             this.Hide();
+        }
+
+     
+
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Directory.CreateDirectory(@"C:\Ekran_Resimleri");
+            var frm = Form.ActiveForm;
+            using (var bmp = new Bitmap(frm.Width, frm.Height))
+            {
+                frm.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                bmp.Save(@"C:\Ekran_Resimleri\ekrangoruntusu.png");
+            }
+            MessageBox.Show("Rapor Ekran_Resimleri klasöründe kaydedildi.");
         }
     }
 }

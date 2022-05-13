@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 
 namespace SınavSistemii
 {
@@ -99,6 +99,18 @@ namespace SınavSistemii
             OgrenciMenuForm ogrmenu = new OgrenciMenuForm();
             ogrmenu.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Directory.CreateDirectory(@"C:\Ekran_Resimleri");
+            var frm = Form.ActiveForm;
+            using (var bmp = new Bitmap(frm.Width, frm.Height))
+            {
+                frm.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                bmp.Save(@"C:\Ekran_Resimleri\ekrangoruntusu2.png");
+            }
+            MessageBox.Show("Rapor Ekran_Resimleri klasöründe kaydedildi.");
         }
     }
 }

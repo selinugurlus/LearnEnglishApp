@@ -245,16 +245,15 @@ namespace SınavSistemii
 
         int saniye = 60;
         int dakika = 10;
-        private void surebaslatbutton_Click(object sender, EventArgs e)
-        {
-         
-        }
+       
         private void surebaslatbutton_Click_1(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            timer1.Start();
+            
            
-            timer1.Interval = 100;
+            timer1.Interval = 1000;
+            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Start();
             dk_label.Text = dakika.ToString();
             sn_label.Text = saniye.ToString();
         }

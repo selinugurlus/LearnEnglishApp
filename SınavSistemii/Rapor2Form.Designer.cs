@@ -57,6 +57,7 @@ namespace SınavSistemii
             this.JobstextBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -255,11 +256,23 @@ namespace SınavSistemii
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.ımageList1.Images.SetKeyName(0, "indir.jpg");
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.PeachPuff;
+            this.button2.Location = new System.Drawing.Point(1063, 584);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 81);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "ÇIKTISINI KAYDET";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Rapor2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 723);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.JobstextBox1);
             this.Controls.Add(this.PresentTextBox);
@@ -316,5 +329,6 @@ namespace SınavSistemii
         private System.Windows.Forms.TextBox JobstextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button button2;
     }
 }
