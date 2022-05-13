@@ -30,6 +30,7 @@ namespace SınavSistemii
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinavForm));
             this.SinavSorutextBox = new System.Windows.Forms.TextBox();
             this.SinavResimpictureBox = new System.Windows.Forms.PictureBox();
             this.DogruCevapbutton = new System.Windows.Forms.Button();
@@ -48,12 +49,14 @@ namespace SınavSistemii
             this.sn_label = new System.Windows.Forms.Label();
             this.surebaslatbutton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SinavResimpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // SinavSorutextBox
             // 
-            this.SinavSorutextBox.Location = new System.Drawing.Point(196, 207);
+            this.SinavSorutextBox.Location = new System.Drawing.Point(197, 220);
             this.SinavSorutextBox.Multiline = true;
             this.SinavSorutextBox.Name = "SinavSorutextBox";
             this.SinavSorutextBox.Size = new System.Drawing.Size(444, 144);
@@ -61,7 +64,7 @@ namespace SınavSistemii
             // 
             // SinavResimpictureBox
             // 
-            this.SinavResimpictureBox.Location = new System.Drawing.Point(854, 146);
+            this.SinavResimpictureBox.Location = new System.Drawing.Point(814, 220);
             this.SinavResimpictureBox.Name = "SinavResimpictureBox";
             this.SinavResimpictureBox.Size = new System.Drawing.Size(258, 218);
             this.SinavResimpictureBox.TabIndex = 1;
@@ -69,7 +72,7 @@ namespace SınavSistemii
             // 
             // DogruCevapbutton
             // 
-            this.DogruCevapbutton.Location = new System.Drawing.Point(172, 463);
+            this.DogruCevapbutton.Location = new System.Drawing.Point(197, 400);
             this.DogruCevapbutton.Name = "DogruCevapbutton";
             this.DogruCevapbutton.Size = new System.Drawing.Size(140, 66);
             this.DogruCevapbutton.TabIndex = 11;
@@ -78,7 +81,7 @@ namespace SınavSistemii
             // 
             // YanlisCevap1button
             // 
-            this.YanlisCevap1button.Location = new System.Drawing.Point(489, 478);
+            this.YanlisCevap1button.Location = new System.Drawing.Point(501, 400);
             this.YanlisCevap1button.Name = "YanlisCevap1button";
             this.YanlisCevap1button.Size = new System.Drawing.Size(140, 66);
             this.YanlisCevap1button.TabIndex = 12;
@@ -87,7 +90,7 @@ namespace SınavSistemii
             // 
             // YanlisCevap2button
             // 
-            this.YanlisCevap2button.Location = new System.Drawing.Point(172, 605);
+            this.YanlisCevap2button.Location = new System.Drawing.Point(197, 503);
             this.YanlisCevap2button.Name = "YanlisCevap2button";
             this.YanlisCevap2button.Size = new System.Drawing.Size(140, 66);
             this.YanlisCevap2button.TabIndex = 13;
@@ -96,7 +99,7 @@ namespace SınavSistemii
             // 
             // YanlisCevap3button
             // 
-            this.YanlisCevap3button.Location = new System.Drawing.Point(489, 605);
+            this.YanlisCevap3button.Location = new System.Drawing.Point(512, 503);
             this.YanlisCevap3button.Name = "YanlisCevap3button";
             this.YanlisCevap3button.Size = new System.Drawing.Size(140, 66);
             this.YanlisCevap3button.TabIndex = 14;
@@ -105,7 +108,7 @@ namespace SınavSistemii
             // 
             // SinaviBaslatButton
             // 
-            this.SinaviBaslatButton.Location = new System.Drawing.Point(898, 490);
+            this.SinaviBaslatButton.Location = new System.Drawing.Point(861, 476);
             this.SinaviBaslatButton.Name = "SinaviBaslatButton";
             this.SinaviBaslatButton.Size = new System.Drawing.Size(182, 93);
             this.SinaviBaslatButton.TabIndex = 15;
@@ -115,7 +118,7 @@ namespace SınavSistemii
             // 
             // KonutextBox
             // 
-            this.KonutextBox.Location = new System.Drawing.Point(187, 117);
+            this.KonutextBox.Location = new System.Drawing.Point(77, 251);
             this.KonutextBox.Name = "KonutextBox";
             this.KonutextBox.Size = new System.Drawing.Size(100, 26);
             this.KonutextBox.TabIndex = 16;
@@ -123,7 +126,7 @@ namespace SınavSistemii
             // Konulabel
             // 
             this.Konulabel.AutoSize = true;
-            this.Konulabel.Location = new System.Drawing.Point(118, 120);
+            this.Konulabel.Location = new System.Drawing.Point(8, 257);
             this.Konulabel.Name = "Konulabel";
             this.Konulabel.Size = new System.Drawing.Size(50, 20);
             this.Konulabel.TabIndex = 17;
@@ -131,7 +134,7 @@ namespace SınavSistemii
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(880, 80);
+            this.dateTimePicker1.Location = new System.Drawing.Point(843, 152);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 18;
@@ -139,7 +142,7 @@ namespace SınavSistemii
             // lab
             // 
             this.lab.AutoSize = true;
-            this.lab.Location = new System.Drawing.Point(843, 412);
+            this.lab.Location = new System.Drawing.Point(193, 625);
             this.lab.Name = "lab";
             this.lab.Size = new System.Drawing.Size(94, 20);
             this.lab.TabIndex = 19;
@@ -147,7 +150,7 @@ namespace SınavSistemii
             // 
             // SayactextBox
             // 
-            this.SayactextBox.Location = new System.Drawing.Point(943, 409);
+            this.SayactextBox.Location = new System.Drawing.Point(293, 625);
             this.SayactextBox.Name = "SayactextBox";
             this.SayactextBox.Size = new System.Drawing.Size(100, 26);
             this.SayactextBox.TabIndex = 20;
@@ -155,7 +158,7 @@ namespace SınavSistemii
             // Surelabel
             // 
             this.Surelabel.AutoSize = true;
-            this.Surelabel.Location = new System.Drawing.Point(438, 123);
+            this.Surelabel.Location = new System.Drawing.Point(268, 156);
             this.Surelabel.Name = "Surelabel";
             this.Surelabel.Size = new System.Drawing.Size(125, 20);
             this.Surelabel.TabIndex = 21;
@@ -164,7 +167,7 @@ namespace SınavSistemii
             // dk_label
             // 
             this.dk_label.AutoSize = true;
-            this.dk_label.Location = new System.Drawing.Point(589, 123);
+            this.dk_label.Location = new System.Drawing.Point(421, 156);
             this.dk_label.Name = "dk_label";
             this.dk_label.Size = new System.Drawing.Size(19, 20);
             this.dk_label.TabIndex = 22;
@@ -173,7 +176,7 @@ namespace SınavSistemii
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(614, 120);
+            this.label1.Location = new System.Drawing.Point(446, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 20);
             this.label1.TabIndex = 23;
@@ -182,7 +185,7 @@ namespace SınavSistemii
             // sn_label
             // 
             this.sn_label.AutoSize = true;
-            this.sn_label.Location = new System.Drawing.Point(633, 123);
+            this.sn_label.Location = new System.Drawing.Point(465, 156);
             this.sn_label.Name = "sn_label";
             this.sn_label.Size = new System.Drawing.Size(19, 20);
             this.sn_label.TabIndex = 24;
@@ -190,7 +193,7 @@ namespace SınavSistemii
             // 
             // surebaslatbutton
             // 
-            this.surebaslatbutton.Location = new System.Drawing.Point(673, 117);
+            this.surebaslatbutton.Location = new System.Drawing.Point(501, 152);
             this.surebaslatbutton.Name = "surebaslatbutton";
             this.surebaslatbutton.Size = new System.Drawing.Size(127, 29);
             this.surebaslatbutton.TabIndex = 25;
@@ -202,11 +205,29 @@ namespace SınavSistemii
             // 
             this.timer1.Enabled = true;
             // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "indir.jpg");
+            // 
+            // button1
+            // 
+            this.button1.ImageKey = "indir.jpg";
+            this.button1.ImageList = this.ımageList1;
+            this.button1.Location = new System.Drawing.Point(12, 97);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 66);
+            this.button1.TabIndex = 26;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SinavForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1322, 742);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.surebaslatbutton);
             this.Controls.Add(this.sn_label);
             this.Controls.Add(this.label1);
@@ -252,5 +273,7 @@ namespace SınavSistemii
         private System.Windows.Forms.Label sn_label;
         private System.Windows.Forms.Button surebaslatbutton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button button1;
     }
 }

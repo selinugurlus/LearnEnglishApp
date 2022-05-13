@@ -29,9 +29,11 @@ namespace SınavSistemii
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RaporForm));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.AnimalstextBox = new System.Windows.Forms.TextBox();
             this.JobstextBox = new System.Windows.Forms.TextBox();
@@ -53,6 +55,8 @@ namespace SınavSistemii
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +68,7 @@ namespace SınavSistemii
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(228, 101);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
@@ -76,70 +80,70 @@ namespace SınavSistemii
             // 
             // AnimalstextBox
             // 
-            this.AnimalstextBox.Location = new System.Drawing.Point(94, 95);
+            this.AnimalstextBox.Location = new System.Drawing.Point(113, 206);
             this.AnimalstextBox.Name = "AnimalstextBox";
             this.AnimalstextBox.Size = new System.Drawing.Size(100, 26);
             this.AnimalstextBox.TabIndex = 1;
             // 
             // JobstextBox
             // 
-            this.JobstextBox.Location = new System.Drawing.Point(94, 137);
+            this.JobstextBox.Location = new System.Drawing.Point(113, 248);
             this.JobstextBox.Name = "JobstextBox";
             this.JobstextBox.Size = new System.Drawing.Size(100, 26);
             this.JobstextBox.TabIndex = 2;
             // 
             // PresenttextBox
             // 
-            this.PresenttextBox.Location = new System.Drawing.Point(94, 186);
+            this.PresenttextBox.Location = new System.Drawing.Point(113, 297);
             this.PresenttextBox.Name = "PresenttextBox";
             this.PresenttextBox.Size = new System.Drawing.Size(100, 26);
             this.PresenttextBox.TabIndex = 3;
             // 
             // FoodstextBox
             // 
-            this.FoodstextBox.Location = new System.Drawing.Point(94, 238);
+            this.FoodstextBox.Location = new System.Drawing.Point(113, 349);
             this.FoodstextBox.Name = "FoodstextBox";
             this.FoodstextBox.Size = new System.Drawing.Size(100, 26);
             this.FoodstextBox.TabIndex = 4;
             // 
             // FuturetextBox
             // 
-            this.FuturetextBox.Location = new System.Drawing.Point(94, 293);
+            this.FuturetextBox.Location = new System.Drawing.Point(113, 404);
             this.FuturetextBox.Name = "FuturetextBox";
             this.FuturetextBox.Size = new System.Drawing.Size(100, 26);
             this.FuturetextBox.TabIndex = 5;
             // 
             // ClothestextBox
             // 
-            this.ClothestextBox.Location = new System.Drawing.Point(94, 356);
+            this.ClothestextBox.Location = new System.Drawing.Point(113, 467);
             this.ClothestextBox.Name = "ClothestextBox";
             this.ClothestextBox.Size = new System.Drawing.Size(100, 26);
             this.ClothestextBox.TabIndex = 6;
             // 
             // PasttextBox
             // 
-            this.PasttextBox.Location = new System.Drawing.Point(94, 411);
+            this.PasttextBox.Location = new System.Drawing.Point(113, 522);
             this.PasttextBox.Name = "PasttextBox";
             this.PasttextBox.Size = new System.Drawing.Size(100, 26);
             this.PasttextBox.TabIndex = 7;
             // 
             // ColorstextBox
             // 
-            this.ColorstextBox.Location = new System.Drawing.Point(94, 468);
+            this.ColorstextBox.Location = new System.Drawing.Point(113, 579);
             this.ColorstextBox.Name = "ColorstextBox";
             this.ColorstextBox.Size = new System.Drawing.Size(100, 26);
             this.ColorstextBox.TabIndex = 8;
             // 
             // FurniturestextBox
             // 
-            this.FurniturestextBox.Location = new System.Drawing.Point(94, 523);
+            this.FurniturestextBox.Location = new System.Drawing.Point(113, 634);
             this.FurniturestextBox.Name = "FurniturestextBox";
             this.FurniturestextBox.Size = new System.Drawing.Size(100, 26);
             this.FurniturestextBox.TabIndex = 9;
             // 
             // NumberstextBox
             // 
-            this.NumberstextBox.Location = new System.Drawing.Point(94, 565);
+            this.NumberstextBox.Location = new System.Drawing.Point(113, 676);
             this.NumberstextBox.Name = "NumberstextBox";
             this.NumberstextBox.Size = new System.Drawing.Size(100, 26);
             this.NumberstextBox.TabIndex = 10;
@@ -147,7 +151,7 @@ namespace SınavSistemii
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 101);
+            this.label1.Location = new System.Drawing.Point(38, 212);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 11;
@@ -156,7 +160,7 @@ namespace SınavSistemii
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 143);
+            this.label2.Location = new System.Drawing.Point(60, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 20);
             this.label2.TabIndex = 12;
@@ -165,7 +169,7 @@ namespace SınavSistemii
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 192);
+            this.label3.Location = new System.Drawing.Point(24, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 13;
@@ -174,7 +178,7 @@ namespace SınavSistemii
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 238);
+            this.label4.Location = new System.Drawing.Point(49, 349);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 14;
@@ -183,7 +187,7 @@ namespace SınavSistemii
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 293);
+            this.label5.Location = new System.Drawing.Point(34, 404);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 15;
@@ -192,7 +196,7 @@ namespace SınavSistemii
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 359);
+            this.label6.Location = new System.Drawing.Point(40, 470);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 20);
             this.label6.TabIndex = 16;
@@ -201,7 +205,7 @@ namespace SınavSistemii
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 417);
+            this.label7.Location = new System.Drawing.Point(49, 528);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 20);
             this.label7.TabIndex = 17;
@@ -210,7 +214,7 @@ namespace SınavSistemii
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 474);
+            this.label8.Location = new System.Drawing.Point(49, 585);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 20);
             this.label8.TabIndex = 18;
@@ -219,7 +223,7 @@ namespace SınavSistemii
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 523);
+            this.label9.Location = new System.Drawing.Point(24, 634);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(85, 20);
             this.label9.TabIndex = 19;
@@ -228,17 +232,35 @@ namespace SınavSistemii
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 571);
+            this.label10.Location = new System.Drawing.Point(30, 682);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 20);
             this.label10.TabIndex = 20;
             this.label10.Text = "Numbers:";
+            // 
+            // button1
+            // 
+            this.button1.ImageKey = "indir.jpg";
+            this.button1.ImageList = this.ımageList1;
+            this.button1.Location = new System.Drawing.Point(28, 110);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 69);
+            this.button1.TabIndex = 21;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "indir.jpg");
             // 
             // RaporForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 723);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -292,5 +314,7 @@ namespace SınavSistemii
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }

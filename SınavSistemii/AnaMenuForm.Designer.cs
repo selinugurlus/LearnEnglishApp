@@ -48,8 +48,9 @@ namespace SınavSistemii
             // 
             this.OgrenciKayıtButton.AutoSize = true;
             this.OgrenciKayıtButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.OgrenciKayıtButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.OgrenciKayıtButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.OgrenciKayıtButton.Depth = 0;
+            this.OgrenciKayıtButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.OgrenciKayıtButton.Icon = null;
             this.OgrenciKayıtButton.Location = new System.Drawing.Point(204, 350);
             this.OgrenciKayıtButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);

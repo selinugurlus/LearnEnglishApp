@@ -24,7 +24,7 @@ namespace SınavSistemii
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme
-                (MaterialSkin.Primary.LightBlue200, MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.LightBlue300, MaterialSkin.Accent.Pink200, MaterialSkin.TextShade.WHITE);
+                (MaterialSkin.Primary.Orange200, MaterialSkin.Primary.Orange300, MaterialSkin.Primary.Orange100, MaterialSkin.Accent.DeepOrange100, MaterialSkin.TextShade.WHITE);
         }
 
         private void SoruOnayForm_Load(object sender, EventArgs e)
@@ -48,6 +48,13 @@ namespace SınavSistemii
                 MessageBox.Show("Seçilen sorular kaldırıldı. Kalan sorular onaylandı.");
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminGirisForm adgiris = new AdminGirisForm();
+            adgiris.Show();
+            this.Hide();
         }
     }
 }

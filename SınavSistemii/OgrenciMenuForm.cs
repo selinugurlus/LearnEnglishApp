@@ -22,7 +22,7 @@ namespace SınavSistemii
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme
-                (MaterialSkin.Primary.LightBlue200, MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.LightBlue300, MaterialSkin.Accent.Pink200, MaterialSkin.TextShade.WHITE);
+                (MaterialSkin.Primary.Orange200, MaterialSkin.Primary.Orange300, MaterialSkin.Primary.Orange100, MaterialSkin.Accent.DeepOrange100, MaterialSkin.TextShade.WHITE);
         }
 
         private void NormalSinavButton_Click(object sender, EventArgs e)
@@ -36,6 +36,28 @@ namespace SınavSistemii
         {
             Sinav2Form Sinav2 = new Sinav2Form();
             Sinav2.Show();
+            this.Hide();
+        }
+
+       
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            RaporForm rapor = new RaporForm();
+            rapor.Show();
+            this.Hide();
+        }
+
+        private void RaporButton_Click(object sender, EventArgs e)
+        {
+            Rapor2Form rapor2 = new Rapor2Form();
+            rapor2.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OgrenciGirisForm ogrgiris = new OgrenciGirisForm();
+            ogrgiris.Show();
             this.Hide();
         }
     }

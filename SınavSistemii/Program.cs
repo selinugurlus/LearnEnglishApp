@@ -16,7 +16,7 @@ namespace SınavSistemii
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sinav2Form());
+            Application.Run(new AnaMenuForm());
         }
     }
 }

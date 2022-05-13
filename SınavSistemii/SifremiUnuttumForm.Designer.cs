@@ -29,9 +29,13 @@ namespace SınavSistemii
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SifremiUnuttumForm));
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.SifreUnuttumMailTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.SifreGonderButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -40,7 +44,7 @@ namespace SınavSistemii
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(114, 149);
+            this.materialLabel1.Location = new System.Drawing.Point(118, 181);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(582, 27);
@@ -70,7 +74,7 @@ namespace SınavSistemii
             this.SifreGonderButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SifreGonderButton.Depth = 0;
             this.SifreGonderButton.Icon = null;
-            this.SifreGonderButton.Location = new System.Drawing.Point(342, 306);
+            this.SifreGonderButton.Location = new System.Drawing.Point(344, 325);
             this.SifreGonderButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SifreGonderButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SifreGonderButton.Name = "SifreGonderButton";
@@ -81,11 +85,29 @@ namespace SınavSistemii
             this.SifreGonderButton.UseVisualStyleBackColor = true;
             this.SifreGonderButton.Click += new System.EventHandler(this.SifreGonderButton_Click);
             // 
+            // button1
+            // 
+            this.button1.ImageKey = "indir.jpg";
+            this.button1.ImageList = this.ımageList1;
+            this.button1.Location = new System.Drawing.Point(12, 107);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 57);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "indir.jpg");
+            // 
             // SifremiUnuttumForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.SifreGonderButton);
             this.Controls.Add(this.SifreUnuttumMailTextField);
             this.Controls.Add(this.materialLabel1);
@@ -101,5 +123,7 @@ namespace SınavSistemii
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialSingleLineTextField SifreUnuttumMailTextField;
         private MaterialSkin.Controls.MaterialFlatButton SifreGonderButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }

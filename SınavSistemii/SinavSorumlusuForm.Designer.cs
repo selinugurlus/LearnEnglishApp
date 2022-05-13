@@ -29,6 +29,7 @@ namespace SınavSistemii
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinavSorumlusuForm));
             this.SSorumlusuGirisButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SSorumlusuSifreTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -36,6 +37,8 @@ namespace SınavSistemii
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +48,7 @@ namespace SınavSistemii
             this.SSorumlusuGirisButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SSorumlusuGirisButton.Depth = 0;
             this.SSorumlusuGirisButton.Icon = null;
-            this.SSorumlusuGirisButton.Location = new System.Drawing.Point(382, 553);
+            this.SSorumlusuGirisButton.Location = new System.Drawing.Point(365, 501);
             this.SSorumlusuGirisButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SSorumlusuGirisButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SSorumlusuGirisButton.Name = "SSorumlusuGirisButton";
@@ -126,11 +129,29 @@ namespace SınavSistemii
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.ImageKey = "indir.jpg";
+            this.button1.ImageList = this.ımageList1;
+            this.button1.Location = new System.Drawing.Point(45, 85);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 68);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "indir.jpg");
+            // 
             // SinavSorumlusuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 732);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SSorumlusuGirisButton);
             this.Controls.Add(this.SSorumlusuSifreTextField);
@@ -153,5 +174,7 @@ namespace SınavSistemii
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }

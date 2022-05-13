@@ -17,7 +17,7 @@ namespace SınavSistemii
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme
-            (MaterialSkin.Primary.LightBlue200, MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.LightBlue300, MaterialSkin.Accent.Pink200, MaterialSkin.TextShade.WHITE);
+            (MaterialSkin.Primary.Orange200, MaterialSkin.Primary.Orange300, MaterialSkin.Primary.Orange300, MaterialSkin.Accent.Orange100, MaterialSkin.TextShade.WHITE);
 
 
         }
@@ -39,7 +39,31 @@ namespace SınavSistemii
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
                 YanlisCevap3button.Enabled = false;
-                MessageBox.Show("sorular bitti");
+                yanlissayisi++;
+                if (sınır == 11)
+                {
+                    Baslabutton.Enabled = false;
+                    DogruCevapbutton.Enabled = false;
+                    YanlisCevap1button.Enabled = false;
+                    YanlisCevap2button.Enabled = false;
+                    YanlisCevap3button.Enabled = false;
+                    Convert.ToString(yanlissayisi);
+                    MessageBox.Show("sorular bitti. Yanlış sayısı:" + yanlissayisi.ToString() + "Doğru sayısı:" + dogrusayisi.ToString());
+
+                }
+                try
+                {
+                    if (baglanti.State == ConnectionState.Closed)
+                        baglanti.Open();
+                    baglanti.Close();
+                    MessageBox.Show("Yanlış cevap.");
+                }
+                catch (Exception hata)
+                {
+                    MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
+                }
+
+                Baslabutton.Enabled = true;
             }
             else
             {
@@ -70,8 +94,39 @@ namespace SınavSistemii
         }
 
 
-        private void DogruCevapbutton_Click_1(object sender, EventArgs e)
+    
+        private void YanlisCevap3button_Click(object sender, EventArgs e)
         {
+            yanlissayisi++;
+            if (sınır == 11)
+            {
+                Baslabutton.Enabled = false;
+                DogruCevapbutton.Enabled = false;
+                YanlisCevap1button.Enabled = false;
+                YanlisCevap2button.Enabled = false;
+                YanlisCevap3button.Enabled = false;
+                Convert.ToString(yanlissayisi);
+                MessageBox.Show("sorular bitti. Yanlış sayısı:" + yanlissayisi.ToString() + "Doğru sayısı:" + dogrusayisi.ToString());
+
+            }
+            try
+            {
+                if (baglanti.State == ConnectionState.Closed)
+                    baglanti.Open();
+                baglanti.Close();
+                MessageBox.Show("Yanlış cevap.");
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
+            }
+
+            Baslabutton.Enabled = true;
+        }
+
+        private void DogruCevapbutton_Click(object sender, EventArgs e)
+        {
+            dogrusayisi++;
             if (sınır == 11)
             {
                 Baslabutton.Enabled = false;
@@ -80,7 +135,7 @@ namespace SınavSistemii
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
                 YanlisCevap3button.Enabled = false;
-                MessageBox.Show("sorular bitti");
+                MessageBox.Show("sorular bitti. Yanlış sayısı:" + yanlissayisi.ToString() + "Doğru sayısı:" + dogrusayisi.ToString());
             }
             try
             {
@@ -99,9 +154,9 @@ namespace SınavSistemii
 
         }
 
-        private void YanlisCevap1button_Click_1(object sender, EventArgs e)
+        private void YanlisCevap1button_Click(object sender, EventArgs e)
         {
-
+            yanlissayisi++;
             if (sınır == 11)
             {
                 Baslabutton.Enabled = false;
@@ -109,7 +164,7 @@ namespace SınavSistemii
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
                 YanlisCevap3button.Enabled = false;
-                MessageBox.Show("sorular bitti");
+                MessageBox.Show("sorular bitti. Yanlış sayısı:" + yanlissayisi.ToString() + "Doğru sayısı:" + dogrusayisi.ToString());
             }
             try
             {
@@ -124,11 +179,11 @@ namespace SınavSistemii
             }
 
             Baslabutton.Enabled = true;
-
         }
 
-        private void YanlisCevap2button_Click_1(object sender, EventArgs e)
+        private void YanlisCevap2button_Click(object sender, EventArgs e)
         {
+            yanlissayisi++;
             if (sınır == 11)
             {
                 Baslabutton.Enabled = false;
@@ -136,7 +191,9 @@ namespace SınavSistemii
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
                 YanlisCevap3button.Enabled = false;
-                MessageBox.Show("sorular bitti");
+                Convert.ToString(yanlissayisi);
+                MessageBox.Show("sorular bitti. Yanlış sayısı:" + yanlissayisi.ToString() + "Doğru sayısı:" + dogrusayisi.ToString());
+
             }
             try
             {
@@ -151,34 +208,14 @@ namespace SınavSistemii
             }
 
             Baslabutton.Enabled = true;
-
         }
 
-        private void YanlisCevap3button_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            OgrenciMenuForm ogrmenu = new OgrenciMenuForm();
+            ogrmenu.Show();
+            this.Hide();
 
-            if (sınır == 11)
-            {
-                Baslabutton.Enabled = false;
-                DogruCevapbutton.Enabled = false;
-                YanlisCevap1button.Enabled = false;
-                YanlisCevap2button.Enabled = false;
-                YanlisCevap3button.Enabled = false;
-                MessageBox.Show("sorular bitti");
-            }
-            try
-            {
-                if (baglanti.State == ConnectionState.Closed)
-                    baglanti.Open();
-                baglanti.Close();
-                MessageBox.Show("Yanlış cevap.");
-            }
-            catch (Exception hata)
-            {
-                MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
-            }
-
-            Baslabutton.Enabled = true;
         }
     }
 }

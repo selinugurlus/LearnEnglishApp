@@ -30,6 +30,7 @@ namespace SınavSistemii
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoruOnayForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.soruidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.konuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +44,8 @@ namespace SınavSistemii
             this.sinavSistemiDBDataSet2 = new SınavSistemii.SinavSistemiDBDataSet2();
             this.SoruKaldırButton = new System.Windows.Forms.Button();
             this.sorularTableAdapter = new SınavSistemii.SinavSistemiDBDataSet2TableAdapters.SorularTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sorularBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sinavSistemiDBDataSet2)).BeginInit();
@@ -63,7 +66,7 @@ namespace SınavSistemii
             this.yanliscevap3DataGridViewTextBoxColumn,
             this.resimDataGridViewImageColumn});
             this.dataGridView1.DataSource = this.sorularBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 99);
+            this.dataGridView1.Location = new System.Drawing.Point(52, 163);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -148,7 +151,7 @@ namespace SınavSistemii
             // 
             // SoruKaldırButton
             // 
-            this.SoruKaldırButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SoruKaldırButton.BackColor = System.Drawing.Color.Coral;
             this.SoruKaldırButton.Location = new System.Drawing.Point(1123, 524);
             this.SoruKaldırButton.Name = "SoruKaldırButton";
             this.SoruKaldırButton.Size = new System.Drawing.Size(200, 93);
@@ -161,11 +164,29 @@ namespace SınavSistemii
             // 
             this.sorularTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.ImageKey = "indir.jpg";
+            this.button1.ImageList = this.ımageList1;
+            this.button1.Location = new System.Drawing.Point(36, 74);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 73);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "indir.jpg");
+            // 
             // SoruOnayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1764, 676);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.SoruKaldırButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "SoruOnayForm";
@@ -193,5 +214,7 @@ namespace SınavSistemii
         private System.Windows.Forms.DataGridViewTextBoxColumn yanliscevap2DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yanliscevap3DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn resimDataGridViewImageColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }

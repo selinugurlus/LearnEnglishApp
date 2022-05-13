@@ -15,7 +15,7 @@ namespace SınavSistemii
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme
-                (MaterialSkin.Primary.LightBlue200, MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.LightBlue300, MaterialSkin.Accent.Pink200, MaterialSkin.TextShade.WHITE);
+                (MaterialSkin.Primary.Orange200, MaterialSkin.Primary.Orange300, MaterialSkin.Primary.Orange100, MaterialSkin.Accent.DeepOrange100, MaterialSkin.TextShade.WHITE);
         }
 
         private void OgrSifreUnutButton_Click(object sender, EventArgs e)
@@ -49,6 +49,16 @@ namespace SınavSistemii
             }
             baglan.Close();
 
+            OgrenciMenuForm Ogrmenu = new OgrenciMenuForm();
+            Ogrmenu.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AnaMenuForm anamenu = new AnaMenuForm();
+            anamenu.Show();
+            this.Hide();
 
         }
     }
