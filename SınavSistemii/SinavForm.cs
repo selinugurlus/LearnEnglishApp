@@ -3,6 +3,7 @@ using MaterialSkin.Controls;
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SınavSistemii
@@ -46,7 +47,7 @@ namespace SınavSistemii
                 SinaviBaslatButton.Enabled = false;
                 SinaviBaslatButton.Text = "Sonraki Soru";
                 baglanti.Open();
-                SqlCommand komut = new SqlCommand("Select * from Sorular where sayac<011111 order by newid() ", baglanti);
+                SqlCommand komut = new SqlCommand("Select * from Sorular where sayac<0111111 order by newid() ", baglanti);
                 // SqlCommand komut = new SqlCommand("select * from Sorular order by NEWID()", baglanti);
                 SqlDataReader oku = komut.ExecuteReader();
 
@@ -61,7 +62,7 @@ namespace SınavSistemii
                     SinavSorutextBox.Text = oku["soru"].ToString();
                     KonutextBox.Text = oku["konu"].ToString();
                     SayactextBox.Text = oku["sayac"].ToString();
-                    // SinavResimpictureBox.Image = (Image)oku["resim"];
+                 //    SinavResimpictureBox.Image = (Image)oku["resim"];
 
                 }
 
@@ -84,13 +85,13 @@ namespace SınavSistemii
                 MessageBox.Show("sorular bitti");
             }
             try
-            {
+            { 
                 SayactextBox.Text = SayactextBox.Text + 1;
                 //int sayi = Convert.ToInt32(SayactextBox.Text);
                 //sayi = sayi + 1;
                 baglanti.Open();
-                SqlCommand komut2 = new SqlCommand("insert into DogruSorular(konu,soru,dogru_cevap,yanlis_cevap1,yanlis_cevap2,yanlis_cevap3,sorma_tarihi,sayac) values( @konu,@soru,@dogru_cevap,@yanlis_cevap1,@yanlis_cevap2,@yanlis_cevap3,@sorma_tarihi,@sayac)", baglanti);
-                //  SqlCommand komut3 = new SqlCommand("Update  set sayac = sayac+1", baglanti);
+                SqlCommand komut2 = new SqlCommand("insert into DogruSorular(konu,soru,dogru_cevap,yanlis_cevap1,yanlis_cevap2,yanlis_cevap3,sorma_tarihi,sayac,sorulacagi_tarih) values( @konu,@soru,@dogru_cevap,@yanlis_cevap1,@yanlis_cevap2,@yanlis_cevap3,@sorma_tarihi,@sayac,@sorulacagi_tarih)", baglanti);
+            //    SqlCommand komut3 = new SqlCommand("Update Sorular set sayac = sayac+1 where (soru=SinavSorutextBox.Text) ", baglanti);
                 SqlCommand komut4 = new SqlCommand("insert into BilinenSorular (konu,soru,dogru_cevap,yanlis_cevap1,yanlis_cevap2,yanlis_cevap3,sorma_tarihi) select konu,soru,dogru_cevap,yanlis_cevap1,yanlis_cevap2,yanlis_cevap3,sorma_tarihi from DogruSorular where(sayac=011111)", baglanti);
                 //  SqlCommand komut5 = new SqlCommand("select konu,soru from DogruSorular,YanlisSorular where sayac>4");
                 if (baglanti.State == ConnectionState.Closed)
@@ -102,10 +103,35 @@ namespace SınavSistemii
                 komut2.Parameters.AddWithValue("@yanlis_cevap2", YanlisCevap2button.Text);
                 komut2.Parameters.AddWithValue("@yanlis_cevap3", YanlisCevap3button.Text);
                 komut2.Parameters.AddWithValue("@sorma_tarihi", dateTimePicker1.Value);
-                //komut3.ExecuteNonQuery();
+                komut2.Parameters.AddWithValue("@sorulacagi_tarih", dateTimePicker1.Value);
+             //   komut3.ExecuteNonQuery();
                 komut2.Parameters.AddWithValue("@sayac", SayactextBox.Text);
                 komut2.ExecuteNonQuery();
                 komut4.ExecuteNonQuery();
+                if(SayactextBox.Text=="01")
+                {
+                    dateTimePicker1.Text= DateTime.Now.AddDays(1).ToShortDateString();
+                }
+                if(SayactextBox.Text=="011")
+                {
+                    dateTimePicker1.Text = DateTime.Now.AddDays(6).ToShortDateString();
+                }
+                if(SayactextBox.Text=="0111")
+                {
+                    dateTimePicker1.Text = DateTime.Now.AddDays(23).ToShortDateString();
+                }
+                if(SayactextBox.Text=="01111")
+                {
+                    dateTimePicker1.Text = DateTime.Now.AddDays(67).ToShortDateString();
+                }
+                if(SayactextBox.Text=="011111")
+                {
+                    dateTimePicker1.Text = DateTime.Now.AddDays(113).ToShortDateString();
+                }
+                if(SayactextBox.Text=="0111111")
+                {
+                    dateTimePicker1.Text = DateTime.Now.AddDays(252).ToShortDateString();
+                }
                 baglanti.Close();
                 MessageBox.Show("Tebrikler,doğru cevap.");
             }
@@ -191,6 +217,7 @@ namespace SınavSistemii
                 komut2.ExecuteNonQuery();
                 baglanti.Close();
                 MessageBox.Show("Yanlış cevap.");
+                
             }
             catch (Exception hata)
             {
