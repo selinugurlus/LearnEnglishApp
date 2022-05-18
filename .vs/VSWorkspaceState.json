@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SınavSistemii"
   ],
-  "SelectedNode": "\\SınavSistemii.sln",
+  "SelectedNode": "\\SınavSistemii\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
