@@ -34,7 +34,7 @@ namespace SınavSistemii
             if (sınır == 11)
             {
                 Baslabutton.Enabled = false;
-                //SinavSorutextBox.Enabled = false;
+                
                 DogruCevapbutton.Enabled = false;
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
@@ -71,7 +71,7 @@ namespace SınavSistemii
                 Baslabutton.Text = "Sonraki Soru";
                 baglanti.Open();
                 SqlCommand komut = new SqlCommand("Select * from YanlisSorular,DogruSorular  order by newid() ", baglanti);
-                // SqlCommand komut = new SqlCommand("select * from Sorular order by NEWID()", baglanti);
+                
                 SqlDataReader oku = komut.ExecuteReader();
 
 
@@ -84,7 +84,7 @@ namespace SınavSistemii
                     YanlisCevap3button.Text = oku["yanlis_cevap3"].ToString();
                     SorutextBox.Text = oku["soru"].ToString();
                     KonutextBox.Text = oku["konu"].ToString();
-                    // SinavResimpictureBox.Image = (Image)oku["resim"];
+                    
 
                 }
 
@@ -130,7 +130,7 @@ namespace SınavSistemii
             if (sınır == 11)
             {
                 Baslabutton.Enabled = false;
-                //SinavSorutextBox.Enabled = false;
+                
                 DogruCevapbutton.Enabled = false;
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;

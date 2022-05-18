@@ -34,6 +34,9 @@ namespace SınavSistemii
         private void btnSoruSıklıkDegis_Click(object sender, EventArgs e)
         {
             n = Convert.ToInt32(txtboxSoruSıklık.Text);
+            SinavForm sinav = new SinavForm();
+            sinav.Show();
+            this.Hide();
         }
 
         private void AyarlarForm_Load(object sender, EventArgs e)
@@ -44,6 +47,9 @@ namespace SınavSistemii
         private void btnvarsayilan_Click(object sender, EventArgs e)
         {
             n = 0;
+            SinavForm sinav = new SinavForm();
+            sinav.Show();
+            this.Hide();
         }
     }
     }

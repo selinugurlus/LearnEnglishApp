@@ -61,7 +61,7 @@ namespace SınavSistemii
                     SinavSorutextBox.Text = oku2["soru"].ToString();
                     KonutextBox.Text = oku2["konu"].ToString();
                     SayactextBox.Text = oku2["sayac"].ToString();
-                    //    SinavResimpictureBox.Image = (Image)oku["resim"];
+                    
 
                 }
 
@@ -78,7 +78,7 @@ namespace SınavSistemii
                     SinavSorutextBox.Text = oku["soru"].ToString();
                     KonutextBox.Text = oku["konu"].ToString();
                     SayactextBox.Text = oku["sayac"].ToString();
-                 //    SinavResimpictureBox.Image = (Image)oku["resim"];
+                 
 
                 }
 
@@ -86,7 +86,7 @@ namespace SınavSistemii
                 baglanti.Close();
              
             }
-            // baglanti.Close();
+            
 
         }
         private void DogruCevapbutton_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace SınavSistemii
             if (sınır == 11)
             {
                 SinaviBaslatButton.Enabled = false;
-                //SinavSorutextBox.Enabled = false;
+               
                 DogruCevapbutton.Enabled = false;
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
@@ -104,13 +104,12 @@ namespace SınavSistemii
             try
             { 
                 SayactextBox.Text = SayactextBox.Text + 1;
-                //int sayi = Convert.ToInt32(SayactextBox.Text);
-                //sayi = sayi + 1;
+                
                 baglanti.Open();
                 SqlCommand komut2 = new SqlCommand("insert into DogruSorular(konu,soru,dogru_cevap,yanlis_cevap1,yanlis_cevap2,yanlis_cevap3,sorma_tarihi,sayac,sorulacagi_tarih) values( @konu,@soru,@dogru_cevap,@yanlis_cevap1,@yanlis_cevap2,@yanlis_cevap3,@sorma_tarihi,@sayac,@sorulacagi_tarih)", baglanti);
-            //    SqlCommand komut3 = new SqlCommand("Update Sorular set sayac = sayac+1 where (soru=SinavSorutextBox.Text) ", baglanti);
+           
                 SqlCommand komut4 = new SqlCommand("insert into BilinenSorular (konu,soru,dogru_cevap,yanlis_cevap1,yanlis_cevap2,yanlis_cevap3,sorma_tarihi) select konu,soru,dogru_cevap,yanlis_cevap1,yanlis_cevap2,yanlis_cevap3,sorma_tarihi from DogruSorular where(sayac=011111)", baglanti);
-                //  SqlCommand komut5 = new SqlCommand("select konu,soru from DogruSorular,YanlisSorular where sayac>4");
+                
                 if (baglanti.State == ConnectionState.Closed)
                     baglanti.Open();
                 komut2.Parameters.AddWithValue("@konu", KonutextBox.Text);
@@ -121,7 +120,7 @@ namespace SınavSistemii
                 komut2.Parameters.AddWithValue("@yanlis_cevap3", YanlisCevap3button.Text);
                 komut2.Parameters.AddWithValue("@sorma_tarihi", dateTimePicker1.Value);
                 komut2.Parameters.AddWithValue("@sorulacagi_tarih", dateTimePicker1.Value);
-             //   komut3.ExecuteNonQuery();
+             
                 komut2.Parameters.AddWithValue("@sayac", SayactextBox.Text);
                 komut2.ExecuteNonQuery();
                 komut4.ExecuteNonQuery();
@@ -170,7 +169,7 @@ namespace SınavSistemii
             if (sınır == 11)
             {
                 SinaviBaslatButton.Enabled = false;
-                //SinavSorutextBox.Enabled = false;
+                
                 DogruCevapbutton.Enabled = false;
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
@@ -253,7 +252,7 @@ namespace SınavSistemii
             if (sınır == 11)
             {
                 SinaviBaslatButton.Enabled = false;
-                //SinavSorutextBox.Enabled = false;
+                
                 DogruCevapbutton.Enabled = false;
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
