@@ -14,9 +14,9 @@ namespace SınavSistemii
 {
     public partial class AyarlarForm : MaterialForm
     {
-
         public AyarlarForm()
         {
+
             InitializeComponent();
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -25,18 +25,26 @@ namespace SınavSistemii
                 (MaterialSkin.Primary.Orange200, MaterialSkin.Primary.Orange300, MaterialSkin.Primary.Orange100, MaterialSkin.Accent.DeepOrange100, MaterialSkin.TextShade.WHITE);
         }
 
-        
-    }
 
-    public class HerYerden
-    {
+
         public static int n;
+            
+            
 
+        private void btnSoruSıklıkDegis_Click(object sender, EventArgs e)
+        {
+            n = Convert.ToInt32(txtboxSoruSıklık.Text);
+        }
+
+        private void AyarlarForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnvarsayilan_Click(object sender, EventArgs e)
+        {
+            n = 0;
+        }
     }
-    public void button1_Click(object sender, EventArgs e)
-    {
-        object n =
-        
-        ;
     }
-}
+

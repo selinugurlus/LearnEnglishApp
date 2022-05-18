@@ -125,29 +125,32 @@ namespace SınavSistemii
                 komut2.Parameters.AddWithValue("@sayac", SayactextBox.Text);
                 komut2.ExecuteNonQuery();
                 komut4.ExecuteNonQuery();
+
+                int x = AyarlarForm.n;
+
                 if(SayactextBox.Text=="01")
                 {
-                    dateTimePicker1.Text= DateTime.Now.AddDays(1).ToShortDateString();
+                    dateTimePicker1.Text= DateTime.Now.AddDays(x+1).ToShortDateString();
                 }
                 if(SayactextBox.Text=="011")
                 {
-                    dateTimePicker1.Text = DateTime.Now.AddDays(6).ToShortDateString();
+                    dateTimePicker1.Text = DateTime.Now.AddDays(x+6).ToShortDateString();
                 }
                 if(SayactextBox.Text=="0111")
                 {
-                    dateTimePicker1.Text = DateTime.Now.AddDays(23).ToShortDateString();
+                    dateTimePicker1.Text = DateTime.Now.AddDays(x+23).ToShortDateString();
                 }
                 if(SayactextBox.Text=="01111")
                 {
-                    dateTimePicker1.Text = DateTime.Now.AddDays(67).ToShortDateString();
+                    dateTimePicker1.Text = DateTime.Now.AddDays(x+67).ToShortDateString();
                 }
                 if(SayactextBox.Text=="011111")
                 {
-                    dateTimePicker1.Text = DateTime.Now.AddDays(113).ToShortDateString();
+                    dateTimePicker1.Text = DateTime.Now.AddDays(x+113).ToShortDateString();
                 }
                 if(SayactextBox.Text=="0111111")
                 {
-                    dateTimePicker1.Text = DateTime.Now.AddDays(252).ToShortDateString();
+                    dateTimePicker1.Text = DateTime.Now.AddDays(x+252).ToShortDateString();
                 }
                 baglanti.Close();
                 MessageBox.Show("Tebrikler,doğru cevap.");
