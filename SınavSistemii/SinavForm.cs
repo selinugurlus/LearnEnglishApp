@@ -23,7 +23,6 @@ namespace SınavSistemii
 
         static string constring = "Data Source=LAPTOP-CS90DTMS\\MSSQL;Initial Catalog=SinavSistemiDB;Integrated Security=True";
         SqlConnection baglanti = new SqlConnection(constring);
-        //private readonly object dbHelper;
         public int sınır = 0;
 
         private void SinaviBaslatButton_Click(object sender, EventArgs e)
@@ -35,7 +34,6 @@ namespace SınavSistemii
             if (sınır == 11)
             {
                 SinaviBaslatButton.Enabled = false;
-                //SinavSorutextBox.Enabled = false;
                 DogruCevapbutton.Enabled = false;
                 YanlisCevap1button.Enabled = false;
                 YanlisCevap2button.Enabled = false;
@@ -48,11 +46,29 @@ namespace SınavSistemii
                 SinaviBaslatButton.Text = "Sonraki Soru";
                 baglanti.Open();
                 SqlCommand komut = new SqlCommand("Select * from Sorular where sayac<0111111 order by newid() ", baglanti);
-                // SqlCommand komut = new SqlCommand("select * from Sorular order by NEWID()", baglanti);
+                
+               
+                SqlCommand komut2 = new SqlCommand("select * from DogruSorular where convert(date,getdate())between sorulacagi_tarih and sorulacagi_tarih order by newid()",baglanti);
+                SqlDataReader oku2 = komut2.ExecuteReader();
+             
+                while (oku2.Read())
+                {
+                 
+                    DogruCevapbutton.Text = oku2["dogru_cevap"].ToString();
+                    YanlisCevap1button.Text = oku2["yanlis_cevap1"].ToString();
+                    YanlisCevap2button.Text = oku2["yanlis_cevap2"].ToString();
+                    YanlisCevap3button.Text = oku2["yanlis_cevap3"].ToString();
+                    SinavSorutextBox.Text = oku2["soru"].ToString();
+                    KonutextBox.Text = oku2["konu"].ToString();
+                    SayactextBox.Text = oku2["sayac"].ToString();
+                    //    SinavResimpictureBox.Image = (Image)oku["resim"];
+
+                }
+
+                baglanti.Close();
+                baglanti.Open();
+               
                 SqlDataReader oku = komut.ExecuteReader();
-
-
-
                 while (oku.Read())
                 {
                     DogruCevapbutton.Text = oku["dogru_cevap"].ToString();
@@ -68,6 +84,7 @@ namespace SınavSistemii
 
 
                 baglanti.Close();
+             
             }
             // baglanti.Close();
 

@@ -68,6 +68,12 @@
     <Compile Include="AnaMenuForm.Designer.cs">
       <DependentUpon>AnaMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AyarlarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyarlarForm.Designer.cs">
+      <DependentUpon>AyarlarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AnaMenuForm.resx">
       <DependentUpon>AnaMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AyarlarForm.resx">
+      <DependentUpon>AyarlarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciGirisForm.resx">
       <DependentUpon>OgrenciGirisForm.cs</DependentUpon>

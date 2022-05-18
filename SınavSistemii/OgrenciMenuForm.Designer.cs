@@ -40,6 +40,7 @@ namespace SınavSistemii
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.button1 = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.OgrAyarlarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -82,6 +83,7 @@ namespace SınavSistemii
             // RaporButton
             // 
             this.RaporButton.AutoSize = true;
+            this.RaporButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.RaporButton.Depth = 0;
             this.RaporButton.Icon = null;
             this.RaporButton.Location = new System.Drawing.Point(911, 479);
@@ -89,7 +91,7 @@ namespace SınavSistemii
             this.RaporButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.RaporButton.Name = "RaporButton";
             this.RaporButton.Primary = false;
-            this.RaporButton.Size = new System.Drawing.Size(297, 60);
+            this.RaporButton.Size = new System.Drawing.Size(297, 36);
             this.RaporButton.TabIndex = 2;
             this.RaporButton.Text = "YANLIŞ YAPILAN SORULARIN\r\n      ANALİZ RAPORUNU AL";
             this.RaporButton.UseVisualStyleBackColor = true;
@@ -128,6 +130,7 @@ namespace SınavSistemii
             // materialFlatButton1
             // 
             this.materialFlatButton1.AutoSize = true;
+            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
             this.materialFlatButton1.Icon = null;
             this.materialFlatButton1.Location = new System.Drawing.Point(912, 399);
@@ -135,7 +138,7 @@ namespace SınavSistemii
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(296, 57);
+            this.materialFlatButton1.Size = new System.Drawing.Size(296, 36);
             this.materialFlatButton1.TabIndex = 6;
             this.materialFlatButton1.Text = "DOĞRU YAPILAN SORULARIN\r\n      ANALİZ RAPORUNU AL";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
@@ -158,11 +161,22 @@ namespace SınavSistemii
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.ımageList1.Images.SetKeyName(0, "indir.jpg");
             // 
+            // OgrAyarlarbutton
+            // 
+            this.OgrAyarlarbutton.Location = new System.Drawing.Point(516, 549);
+            this.OgrAyarlarbutton.Name = "OgrAyarlarbutton";
+            this.OgrAyarlarbutton.Size = new System.Drawing.Size(223, 65);
+            this.OgrAyarlarbutton.TabIndex = 8;
+            this.OgrAyarlarbutton.Text = "AYARLAR";
+            this.OgrAyarlarbutton.UseVisualStyleBackColor = true;
+            this.OgrAyarlarbutton.Click += new System.EventHandler(this.OgrAyarlarbutton_Click);
+            // 
             // OgrenciMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 641);
+            this.Controls.Add(this.OgrAyarlarbutton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.pictureBox3);
@@ -192,5 +206,6 @@ namespace SınavSistemii
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button OgrAyarlarbutton;
     }
 }

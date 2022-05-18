@@ -60,5 +60,12 @@ namespace SınavSistemii
             ogrgiris.Show();
             this.Hide();
         }
+
+        private void OgrAyarlarbutton_Click(object sender, EventArgs e)
+        {
+            AyarlarForm ayar = new AyarlarForm();
+            ayar.Show();
+            this.Hide();
+        }
     }
 }
